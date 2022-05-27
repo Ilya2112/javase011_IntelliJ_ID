@@ -1,5 +1,7 @@
 package ru.javalang.module02.tasks.t03;
 
+import java.util.Scanner;
+
 /**
  * Дано целое число n. Выведите следующее за ним четное число.
  * При решении этой задачи нельзя использовать условную инструкцию if и циклы.
@@ -19,6 +21,9 @@ package ru.javalang.module02.tasks.t03;
  */
 public class Main {
     public static void main(String[] args) {
-
+        Scanner in = new Scanner(System.in);
+        System.out.print("Vvedite celoe chislo: ");
+        int x = in.nextInt();
+        System.out.println("Sledyuschee chetnoe chislo: " + ((x/2+1)*2));
     }
 }
