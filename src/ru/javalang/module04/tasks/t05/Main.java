@@ -1,5 +1,7 @@
 package ru.javalang.module04.tasks.t05;
 
+import java.util.Scanner;
+
 /**
  * Напишите программу, которая выполняет "сжатие массива целых чисел" –
  *  переставляет все нулевые элементы в конец.
@@ -11,4 +13,35 @@ package ru.javalang.module04.tasks.t05;
  */
 
 public class Main {
+    public static void main(String[] args) {
+
+        System.out.print("Vvedite chislo elementov massiva: ");
+        Scanner in = new Scanner(System.in);
+        int x = in.nextInt();
+        int y;
+
+        int[] arr = new int[x];
+
+        for (int i = 0; i < x; i++) {
+            System.out.print("Vvedite " + (i+1) + "ое chislo massiva: ");
+            arr[i] = in.nextInt();
+        }
+
+        System.out.println();
+
+        for (int i = 0; i < x-1; i++) {
+            if (arr[i]==0){
+                for (int j = i; j < x-1; j++) {
+                    y = arr[j];
+                    arr[j]=arr[j+1];
+                    arr[j+1]=y;
+                }
+            }
+        }
+
+        for (int i = 0; i < x; i++) {
+            System.out.println("Element massiva #" + (i+1) + ": " + arr[i]);
+        }
+
+    }
 }
