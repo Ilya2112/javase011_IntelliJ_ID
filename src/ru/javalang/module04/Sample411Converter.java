@@ -21,5 +21,20 @@ public class Sample411Converter {
 
         // Здесь должен быть код!
 
+        int j = 0; // номер месяца
+
+        for (int i = 0; i < monthDays.length; i++) {
+            n = n - monthDays[i];
+            if (n<=0) {
+                j = i;
+                break;
+            }
+        }
+
+        //System.out.println(n);
+        //System.out.println(j);
+        System.out.println("Day: " + (monthDays[j]+n) + " Month: " + monthes[j]);
+
+
     }
 }
