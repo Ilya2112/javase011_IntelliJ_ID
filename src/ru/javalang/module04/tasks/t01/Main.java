@@ -24,10 +24,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.print("Vvedite chislo: ");
+        System.out.print("Vvedite chislo elementov massiva: ");
         Scanner in = new Scanner(System.in);
         int x = in.nextInt();
-        int y = 0;
 
         int[] arr = new int[x];
 
