@@ -1,5 +1,8 @@
 package ru.javalang.module05.tasks.t03;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 /**
  * Применяя pattern-match выполните распознавание строк для простого тестирования:
  *
@@ -18,6 +21,30 @@ package ru.javalang.module05.tasks.t03;
 
 public class Main {
     public static void main(String[] args) {
+
+        String[] test = new String[5];
+
+        test[0] = "? Какого цвета Солнце";
+        test[1] = "- Зеленый";
+        test[2] = "- Синий";
+        test[3] = "+ Желтый";
+        test[4] = "- Черный";
+
+        for (int i = 0; i < test.length; i++) {
+            System.out.println(test[i]);
+        }
+
+        System.out.println();
+
+        Pattern pattern = Pattern.compile("\\+.*");
+        Matcher matcher;
+
+        for (int i = 0; i < test.length; i++) {
+            matcher = pattern.matcher(test[i]);
+            while (matcher.find()) {
+                System.out.println("Правильный ответ: " + test[i]);
+            }
+        }
 
     }
 }
