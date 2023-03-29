@@ -11,6 +11,5 @@ public class Sample {
         System.out.println(User);
         System.out.println(User1[0]);
 
-
     }
 }
