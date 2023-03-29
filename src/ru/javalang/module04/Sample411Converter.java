@@ -31,8 +31,6 @@ public class Sample411Converter {
             }
         }
 
-        //System.out.println(n);
-        //System.out.println(j);
         System.out.println("Day: " + (monthDays[j]+n) + " Month: " + monthes[j]);
 
 
