@@ -11,7 +11,7 @@ public class Main {
         FileInputStream fileStream = null;
         try {
             fileStream=new FileInputStream("C:\\study\\javase011_IntelliJ_ID\\src\\ru\\javalang\\module10\\tasks\\t02\\TestFile.txt");
-            while (fileStream.available()>0){
+            while (fileStream.read()!=-1){
                 int b = fileStream.read();
                 System.out.print((char)b + " ");
             }
