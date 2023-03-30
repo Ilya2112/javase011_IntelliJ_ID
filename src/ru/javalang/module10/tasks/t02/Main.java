@@ -13,7 +13,13 @@ public class Main {
             fileStream=new FileInputStream("C:\\study\\javase011_IntelliJ_ID\\src\\ru\\javalang\\module10\\tasks\\t02\\TestFile.txt");
             while (fileStream.read()!=-1){
                 int b = fileStream.read();
-                System.out.print((char)b + " ");
+                System.out.print((char)b);
+            }
+            System.out.println();
+            fileStream=new FileInputStream("C:\\study\\javase011_IntelliJ_ID\\src\\ru\\javalang\\module10\\tasks\\t02\\TestFile.txt");
+            while (fileStream.read()!=-1){
+                int b = fileStream.read();
+                System.out.print(b + " ");
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
