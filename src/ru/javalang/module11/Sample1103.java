@@ -10,7 +10,7 @@ public class Sample1103 {
         int[] values = {1, 2, 3, 4, 5};
         try {
             PrintWriter out = new PrintWriter(new
-                    BufferedWriter(new FileWriter("out.txt")));
+                    BufferedWriter(new FileWriter("out1.txt")));
             for (int i = 0; i < values.length; i++) {
                 out.println(values[i]);
             }
