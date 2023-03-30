@@ -11,12 +11,18 @@ public class Sample302 {
 
         System.out.println("Определение четности или нечетности числа.\nВведите целое число: ");
 
-        int n = new Scanner(System.in).nextInt();
+        try {
+            int n = new Scanner(System.in).nextInt();
 
-        // Тернарный оператор
-        String s = n % 2 == 0 ? "четное" : "нечетное";
+            // Тернарный оператор
+            String s = n % 2 == 0 ? "четное" : "нечетное";
+            System.out.println("Число: " + n + " - " + s);
+        }
+        catch (Exception e) {
+            System.out.println("ОШИБКА!!! Требуется ввести целое число!");
+            e.printStackTrace();
+        }
 
-        System.out.println("Число: " + n + " - " + s);
 
     }
 }
